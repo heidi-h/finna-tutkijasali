@@ -1,0 +1,101 @@
+<!-- START of: custom - content/tutkijasali_sv.phtml -->
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+<?php if ($this->resolver('tutkijasaliBegin_fi.phtml')): ?>
+  <?=$this->render('tutkijasaliBegin_fi.phtml')?>
+<?php endif; ?>
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali'])?>
+<?php endif; ?>
+<div class="sidebar left">
+  <div class="content-navigation-menu">
+  </div>
+</div>
+<div class="mainbody right">
+  <div id="begin1" class="content-section">
+    <h2>Instruktioner för Finna Forskarsal</h2>
+    <?= $this->R2()->register(null, ['ignoreCache' => true, 'hideInfo' => true])?>
+  </div>
+
+  <div id="begin2" class="content-section">
+    <h2>Information om användningen av Finna Forskarsal</h2>
+    <p> Dina uppgifter kommer att lagras i Finnas användarregister och REMS-tillståndstjänsten (CSC).Läs mer < <a href="<?= $this->url('content-page', ['page' => 'privacy']) ?>"> dataskyddsmeddelandet.></p>
+    <p> Mängden daglig och månatlig användning är begränsad av dataskyddsskäl. Om din användarsession avbryts mitt i arbetet kan du vid behov kontakta <a href="mailto:finna-palaute@helsinki.fi">finna-palaute@helsinki.fi</a>.</p>
+    <p>Användningsmängderna lagras tillfälligt i tjänsten och tas bort efter 30 dagar om inga onormala mängder har inträffat. Metoden för att beräkna sökbegränsningar är inte bunden till en kalendermånad eller övergången från ett dygn till ett annat.<p>
+    <p>Finnas allmänna sökanvisningar har sammanställts till ett informationspaket på en egen sida. <a href="<?=$this->url('content-page', ['page' => 'help'])?>">Läs Finnas sökanvisningar<a></p>
+  </div>
+
+
+
+  <div id="begin3" class="content-section">
+    <h2>Användarvillkor för Finnas forskarsal</h2>
+    <p>De materialuppgifter som finns i Finnas forskarsal (beskrivningsuppgifter, katalogiseringsuppgifter, metadata) kan användas inom de gränser som fastställs i dataskyddsförordningen och dataskyddslagen. Användaren har rätt att söka och bläddra i materialuppgifterna. Användaren förbinder sig att använda materialuppgifterna och materialen i det syfte som användaren uppgett.</p>
+    <p>Om användaren agerar i strid med användarvillkoren, lagstiftningen eller god sed vad gäller materialuppgifter, kan tjänsteoperatören säga upp åtkomsten och ta bort användarnamnet. Användaren är ansvarig för eventuella skador som åsamkas arkivet eller en tredje part genom att användaren agerat i strid med dessa användarvillkor, lagstiftning, myndighetsbestämmelser eller god sed.</p>
+    <p>Läs mer om aktuell lagstiftning på <a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Finlex.fi-webbplatsen</a></p>
+    <p>Forskarsalens söktjänst innehåller också fritt tillgängliga materialuppgifter. Dessa materialuppgifter går att söka och se även utan inloggning. Finna.fi-söktjänstens materialuppgifter är i regel fritt tillgängliga.<p>
+    <p>Geokodningen av materialet har gjorts med öppna data i OpenStreetMap som har licens från <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">Open Data Commons Open Database.<a></p>
+  </div>
+
+  <div id="begin4" class="content-section">
+    <h2>Begrepp som används i tjänsten</h2>
+
+    <h3>Materialuppgifter</h3>
+    <p>I Finna betyder materialuppgifter all metadata. Dessa omfattar både beskrivande metadata och katalogiseringsuppgifter. En stor del av de materialuppgifter som importeras till Finna är sökbara.</p>
+
+    <h3>Dataskyddade materialuppgifter</h3>
+    <p>Dataskyddade materialuppgifter kan ses genom att logga in i Forskarsalen, ange ett godkänt syfte och förbinda sig till användarvillkoren. Vanligtvis rör dataskyddade materialuppgifter unika eller identifierbara uppgifter kopplade till levande personer, till vilka åtkomsten måste begränsas i enlighet med dataskyddslagen.</p>
+
+    <h3>Personuppgifter</h3>
+    <p>Personuppgifter är sådana uppgifter som gör det möjligt att identifiera en person direkt eller indirekt, till exempel genom att kombinera en enskild uppgift med någon annan uppgift, vilket gör identifiering möjlig. En person kan till exempel identifieras på basis av namn, personbeteckning eller någon av de faktorer som kännetecknar honom eller henne. Källa: <a href="https://tietosuoja.fi" target="_blank">Datatillsynsmannen</a></p>
+
+   <h3>Särskild kategori av personuppgifter</h3>
+   <p>Särskilda kategorier av personuppgifter är: </p>
+   <ul class="list-bullets">
+    <li>ras eller etniskt ursprung</li>
+    <li>politiska åsikter</li>
+    <li>religiös eller filosofisk övertygelse</li>
+    <li>medlemskap i fackförening</li>
+    <li>hälsoinformation</li>
+    <li>sexuell läggning eller sexuellt beteende</li>
+    <li>genetiska och biometriska uppgifter för identifiering av en person.</li>
+   </ul>
+
+   <h3>Användningsavtal</h3>
+   <p>Användarens uppgifter innehåller en indikation på att användaren har förbundit sig att enbart använda tjänstens material och materialuppgifter på ett tillåtet sätt. Se tjänstens <a href="#begin3">Användarvillkor </a>.</p>
+
+   <h3>Syfte</h3>
+   <p>Enligt den finska dataskyddslagen och andra relaterade lagar ska användaren ange syftet med sin användning av dataskyddade materialuppgifter och material. Urvalet syften som går att anges är baserat på lagstiftning. Det valda syftet påverkar inte tillgången till <strong>materialuppgifter</strong> som innehåller personuppgifter.  Visst <strong>digitalt material</strong> som kommer till tjänsten kan vara begränsat för enbart vissa syften.</p>
+
+   <h3>Syften som kan anges:</h3>
+   <ul>
+     <li>Vetenskaplig forskning (all vetenskaplig forskning)</li>
+     <li>Historisk forskning (t.ex. släktforskning)</li>
+     <li>Upprätta, framställa eller försvara juridiskt yrkande</li>
+     <li>Journalistiskt syfte</li>
+     <li>Akademiskt, konstnärligt eller skriftligt uttryck</li>
+     <li>Personligt informationsbehov</li>
+   </ul>
+   <p><a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Läs mer om aktuell lagstiftning.</a></p>
+    
+   <h3>Åtkomst eller åtkomsträttighet</h3>
+   <p>Nyttjanderätt för angivna materialuppgifter eller material beviljas en verifierad identitet i enlighet med dennes syfte.</p>
+
+   <h3>Dataskydd</h3>
+   <p>Dataskydd är en grundläggande fri- och rättighet, som tryggar tillgodoseendet av den registrerades rättigheter och friheter vid behandling av personuppgifter. Syftet med dataskydd är att ange när och under vilka förutsättningar personuppgifter kan behandlas. Behandlingen av personuppgifter ska alltid grunda sig på lagstiftningen. (tietosuoja.fi/sv)</p>
+   <p><a href="<?= $this->url('content-page', ['page' => 'privacy']) ?>">Finna Forskarsals dataskyddsmeddelande.</a>.</p>
+
+  </div>
+
+  <div id="begin5" class="content-section">
+    <h2>Allmänna användarvillkor</h2>
+    <p>Det är förbjudet att använda tjänsten eller delar av den till sådana användningssyften som avviker från sedvanliga användningssyften. Delar av tjänsten som kräver inloggning får inte nyttjas med automatiska åtgärder (inklusive "robot", "spider", "scraper" och "offline reader" programvara).</p>
+    <p>Vi förbehåller rätten att begränsa tjänstens tillgänglighet till exempel för att säkerställa underhållet, ändringsarbeten eller tjänstens funktion.</p>
+  </div>
+
+  <div id="begin6" class="content-section">
+    <h2>Innehåll och beskärning</h2>
+    <p>Tjänsten Finna Forskarsal innehåller för nuvarande materialuppgifter från Finska litteratursällskapets arkivmaterial, som används som pilotmaterial. Information om organisationer som deltar uppdateras under <a href="<?= $this->url('content-page', ['page' => 'tutkijasali-organisaatiot']) ?>">fliken Organisationer.</a></p>
+    <p>I projektets nästa faser implementeras onlineanvändning av material som innehåller dataskyddade element och andra tilläggsfunktioner i tjänsten.</p>
+  </div>
+ 
+</div>
+<!-- END of: custom - content/tutkijasali_sv.phtml -->
